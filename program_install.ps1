@@ -8,6 +8,7 @@ $winget_AppsToInstall = @(
     "Microsoft.VisualStudioCode.Insiders",
     "AgileBits.1Password",
     "RiotGames.LeagueOfLegends.EUW",
+    "Microsoft.OpenSSH.Beta",
     # Power-Toys
     "XP89DCGQ3K6VLD"
 )
