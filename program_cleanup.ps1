@@ -26,6 +26,9 @@ foreach ($package in $winget_AppsToDelete) {
     winget uninstall $package
 }
 
+# Remove builtin OpenSSH
+Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
 
 # Disable Defender
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -Type Dword -Force
