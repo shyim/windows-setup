@@ -36,3 +36,8 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -Nam
 # Disable UAC
 
 Set-ItemProperty -Path REGISTRY::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin -Value 0
+
+# Disable Windows SSH Agent
+
+Set-Service -StartupType Disabled ssh-agent -Status Stopped
+Set-Service -StartupType Disabled sshd -Status Stopped
