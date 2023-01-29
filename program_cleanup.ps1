@@ -29,3 +29,7 @@ foreach ($package in $winget_AppsToDelete) {
 
 # Disable Defender
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -Type Dword -Force
+
+# Disable UAC
+
+Set-ItemProperty -Path REGISTRY::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin -Value 0
